@@ -99,9 +99,13 @@ export default function Mypage() {
                                 <div className={`member_click ${activeTab === 'update' ? 'activeTab' : ''}`} onClick={() => handleMenuClick('update')}>
                                     <label>개인정보 수정</label>
                                 </div>
-                                <div className='kakao_button'> 
+                                <div className='kakao_button'>
                                     <label onClick={() => memberClick()} style={{ cursor: "pointer" }}>1:1문의 </label>
-                                    <KakaoTalkButton onClick={src="https://pf.kakao.com/_bLnGn/chat"}/>
+                                    <KakaoTalkButton onClick={() => {
+  window.open("https://pf.kakao.com/_bLnGn/chat", "_blank", "width=400,height=600,left=200,top=100");
+}} />
+
+
                                 </div>
                             </div>
                         </div>
